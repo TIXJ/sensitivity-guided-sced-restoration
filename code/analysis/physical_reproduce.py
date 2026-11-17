@@ -8,7 +8,6 @@ import shutil
 import subprocess
 import sys
 import tempfile
-import uuid
 from functools import partial
 
 from distribution_integrity import digest, verify
@@ -35,7 +34,9 @@ def prepare():
     manifest_bytes = (REPO / 'MANIFEST.json').read_bytes()
     assert hashlib.sha256(manifest_bytes).hexdigest() == verified['manifest_sha256']
     copy = partial(copy_tree, manifest=json.loads(manifest_bytes)['files'])
-    root = REPO / '_runtime' / uuid.uuid4().hex / 'ED_RL'
+    runtime = REPO / '_runtime'
+    runtime.mkdir(exist_ok=True)
+    root = Path(tempfile.mkdtemp(prefix='', dir=runtime)) / 'ED_RL'
     revision = root / 'GAT-SAC-SCED-Framework/first revise'
     analysis = revision / 'experiments'
     # Preserve the historical relative layout rather than modifying physics code.

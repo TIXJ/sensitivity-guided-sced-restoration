@@ -17,7 +17,7 @@ authors:
     given-names: Yuanwei
   - family-names: Liao
     given-names: Changtao
-version: 1.1.0
+version: 1.1.1
 date-released: 2026-11-17
 repository-code: "https://github.com/TIXJ/sensitivity-guided-sced-restoration"
 license: MIT

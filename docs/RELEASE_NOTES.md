@@ -1,4 +1,8 @@
-# v1.1.0: Physical Reproduction Inputs And Entry Points
+# v1.1.1: Windows Runtime Path Length
+
+Fresh public-clone validation found that the 32-character runtime identifier could exceed Windows path limits when the repository itself has a long path. Runtime directories now use atomically allocated eight-character identifiers. This changes filesystem layout only, not model inputs, policy actions or numerical algorithms. The v1.1.0 and v1.0.0 tags remain unchanged.
+
+## v1.1.0: Physical Reproduction Inputs And Entry Points
 
 The first release supported inspection of saved records but omitted inputs needed by physical evaluation. This release adds 36 selected policy files, two runtime helper modules, the screening record, five fixed voltage-context caches, exact frozen operating points for the AC-outage audit, and the final workflow protocols and spatial profiles. The repository now contains 44 checkpoint files and 54 indexed evaluation configurations.
 

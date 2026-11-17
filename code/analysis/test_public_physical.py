@@ -49,6 +49,7 @@ class PublicPhysicalTests(unittest.TestCase):
                 (first / 'stale.pth').write_bytes(b'stale')
                 second, _, _ = physical.prepare()
             self.assertNotEqual(first, second)
+            self.assertEqual(len(first.parent.name), 8)
             self.assertFalse((second / 'stale.pth').exists())
             self.assertTrue((second / 'execution_inputs.json').is_file())
 
