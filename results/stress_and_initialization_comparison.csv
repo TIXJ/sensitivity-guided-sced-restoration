@@ -1,0 +1,11 @@
+experiment,n,passed,initial_passed,preparation_failed,evaluated_after_preparation,including_preparation_mean_sec,failures
+start_economic_v2,75,0,0,0,75,4.345591607981672,"{""voltage_violation"": 75}"
+start_label_v2,75,8,0,0,75,3.619743139995262,"{""voltage_violation"": 23, ""n1_violation"": 11, ""ac_nonconvergence"": 33}"
+start_previous_v2,75,4,0,0,75,5.039740626669178,"{""n1_violation"": 12, ""voltage_violation"": 59}"
+stress_demand-high,75,5,0,35,40,1.0758773560232173,"{""n1_violation"": 10, ""voltage_violation"": 25, ""stress_anchor_nonconvergence"": 35}"
+stress_demand-low,75,75,0,0,75,0.6292840373236686,{}
+stress_reactive,75,30,0,8,67,1.4277515426867953,"{""voltage_violation"": 37, ""stress_anchor_nonconvergence"": 8}"
+stress_regional,75,55,0,8,67,0.7493251160097619,"{""n1_violation"": 9, ""voltage_violation"": 3, ""stress_anchor_nonconvergence"": 8}"
+stress_renewable_v2,75,22,0,8,67,3.7930442440044136,"{""n1_violation"": 17, ""voltage_violation"": 28, ""stress_anchor_nonconvergence"": 8}"
+voltage_0.94_1.08,75,0,0,0,75,2.1143016786438724,"{""voltage_violation"": 75}"
+voltage_0.95_1.05,75,0,0,0,75,2.1083926026771467,"{""voltage_violation"": 75}"

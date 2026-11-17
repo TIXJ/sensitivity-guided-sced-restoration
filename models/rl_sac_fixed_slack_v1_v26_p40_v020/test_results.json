@@ -1,0 +1,1 @@
+{"passed":27,"total":27,"avg_reward":20575.119744242922,"avg_steps":4.703703703703703,"avg_final_n1_overload_mw":0.0,"avg_final_voltage_potential_pu":0.0,"avg_final_low_voltage_violations":0.0,"avg_final_high_voltage_violations":0.0,"reasons":{},"selected_checkpoint":".\\rl_sac_fixed_slack_v1_v26_p40_v020\\best_actor.pth"}

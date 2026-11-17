@@ -1,0 +1,12 @@
+# Recorded scientific environment: Python 3.10.
+numpy==2.2.6
+scipy==1.15.3
+pandapower==3.4.0
+torch==2.9.1
+numba==0.65.1
+matplotlib>=3.7
+pandas>=2.2
+networkx>=3
+reportlab>=4
+# Optional linear-SCED label generation: gurobipy==13.0.1.
+# Gurobi and its license must be obtained separately; neither is distributed here.

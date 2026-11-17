@@ -1,0 +1,9 @@
+__pycache__/
+*.pyc
+*.log
+*.aux
+.env
+*.pem
+generated_tables/
+generated_figures/
+_runtime/

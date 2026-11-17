@@ -1,0 +1,15 @@
+system,source,mode,n,passed,mean_steps,measured_mean_runtime_sec,timing_scope
+39,actions,active_power_only,30,24,10.0,4.126899496666253,historical_action_mask_timing_not_matched
+39,actions,full,30,30,1.2,1.1297812733331132,common_smallcase_v2
+39,actions,no_active_power,30,24,9.2,3.766574873333108,historical_action_mask_timing_not_matched
+39,actions,no_generator_voltage,30,18,16.8,6.407981256666002,historical_action_mask_timing_not_matched
+39,actions,no_reference_voltage,30,30,1.6,0.585223440000118,historical_action_mask_timing_not_matched
+39,baselines,myopic_search,30,30,1.8,4.140925993332833,common_smallcase_v2
+39,baselines,prediction_only,30,12,0.0,0.7328381899996506,common_smallcase_v2
+118,actions,active_power_only,20,0,50.0,18.311186570010612,historical_action_mask_timing_not_matched
+118,actions,full,20,20,10.75,4.763044214999536,common_smallcase_v2
+118,actions,no_active_power,20,20,8.75,3.2186050099669954,historical_action_mask_timing_not_matched
+118,actions,no_generator_voltage,20,0,50.0,18.27756101002451,historical_action_mask_timing_not_matched
+118,actions,no_reference_voltage,20,10,28.0,10.250731410004665,historical_action_mask_timing_not_matched
+118,baselines,myopic_search,20,20,4.25,9.112773055000071,common_smallcase_v2
+118,baselines,prediction_only,20,0,0.0,0.7192887149994931,common_smallcase_v2

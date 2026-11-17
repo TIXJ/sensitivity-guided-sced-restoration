@@ -1,0 +1,23 @@
+cff-version: 1.2.0
+message: "Please cite the associated manuscript when using these materials."
+type: software
+title: "Sensitivity-Guided Low-Dimensional Redispatch for Base-Case Alternating-Current Feasibility and Linear N-1 Contingency Screening"
+authors:
+  - family-names: Lai
+    given-names: Kaiting
+  - family-names: Xie
+    given-names: Yigong
+  - family-names: Fang
+    given-names: Wenchong
+  - family-names: Xu
+    given-names: Danli
+  - family-names: Liu
+    given-names: Yuxuan
+  - family-names: Yang
+    given-names: Yuanwei
+  - family-names: Liao
+    given-names: Changtao
+version: 1.0.0
+date-released: 2026-11-17
+repository-code: "httpexternal/github.com/TIXJ/sensitivity-guided-sced-restoration"
+license: MIT

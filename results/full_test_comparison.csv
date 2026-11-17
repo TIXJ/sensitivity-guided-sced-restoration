@@ -1,0 +1,50 @@
+method,scope,n,passed,pass_rate,mean_runtime_sec,mean_steps,failures
+sac,all_upstream_test,75,44,0.5866666666666667,0.9207356600152949,23.64,"{""n1_violation"": 1, ""voltage_violation"": 30}"
+sac,screened_test,27,27,1.0,0.5437267037125787,4.703703703703703,{}
+sac,demand_16.0_GW,15,15,1.0,0.403128240040193,4.0,{}
+sac,demand_16.2_GW,15,15,1.0,0.6698774799859772,5.266666666666667,{}
+sac,demand_16.4_GW,15,14,0.9333333333333333,0.8678035666545232,8.933333333333334,"{""n1_violation"": 1}"
+sac,demand_16.6_GW,15,0,0.0,1.0979091733538857,50.0,"{""voltage_violation"": 15}"
+sac,demand_16.8_GW,15,0,0.0,1.5649598400418958,50.0,"{""voltage_violation"": 15}"
+full68,all_upstream_test,75,30,0.4,1.212480414652576,32.76,"{""voltage_violation"": 45}"
+full68,screened_test,27,22,0.8148148148148148,1.04917495187234,14.703703703703704,"{""voltage_violation"": 5}"
+full68,demand_16.0_GW,15,15,1.0,0.6112332467144976,6.0,{}
+full68,demand_16.2_GW,15,15,1.0,0.6455120466649532,7.8,{}
+full68,demand_16.4_GW,15,0,0.0,2.93297945332403,50.0,"{""voltage_violation"": 15}"
+full68,demand_16.6_GW,15,0,0.0,0.8898318799523016,50.0,"{""voltage_violation"": 15}"
+full68,demand_16.8_GW,15,0,0.0,0.9828454466070979,50.0,"{""voltage_violation"": 15}"
+ddpg,all_upstream_test,75,43,0.5733333333333334,0.7490410413313657,25.653333333333332,"{""n1_violation"": 2, ""voltage_violation"": 30}"
+ddpg,screened_test,27,27,1.0,0.46315052959619574,5.703703703703703,{}
+ddpg,demand_16.0_GW,15,15,1.0,0.4139448733069003,5.0,{}
+ddpg,demand_16.2_GW,15,14,0.9333333333333333,0.7264217799839874,10.933333333333334,"{""n1_violation"": 1}"
+ddpg,demand_16.4_GW,15,14,0.9333333333333333,0.8243100266903639,12.333333333333334,"{""n1_violation"": 1}"
+ddpg,demand_16.6_GW,15,0,0.0,0.8633499133245398,50.0,"{""voltage_violation"": 15}"
+ddpg,demand_16.8_GW,15,0,0.0,0.9171786133510371,50.0,"{""voltage_violation"": 15}"
+td3,all_upstream_test,75,45,0.6,0.7378251706653585,24.973333333333333,"{""voltage_violation"": 30}"
+td3,screened_test,27,27,1.0,0.6122297962817053,7.777777777777778,{}
+td3,demand_16.0_GW,15,15,1.0,0.5677165000078579,6.933333333333334,{}
+td3,demand_16.2_GW,15,15,1.0,0.6120583866567662,8.133333333333333,{}
+td3,demand_16.4_GW,15,15,1.0,0.7311000999994576,9.8,{}
+td3,demand_16.6_GW,15,0,0.0,0.8625106333289295,50.0,"{""voltage_violation"": 15}"
+td3,demand_16.8_GW,15,0,0.0,0.9157402333337814,50.0,"{""voltage_violation"": 15}"
+acopf,all_upstream_test,75,0,0.0,1.1847658746596426,,"{""n1_violation"": 43, ""ac_opf_failed"": 32}"
+acopf,screened_test,27,0,0.0,1.2312485370267596,,"{""n1_violation"": 27}"
+acopf,demand_16.0_GW,15,0,0.0,1.394728079981481,,"{""n1_violation"": 15}"
+acopf,demand_16.2_GW,15,0,0.0,1.0879409466249248,,"{""n1_violation"": 15}"
+acopf,demand_16.4_GW,15,0,0.0,1.048523006712397,,"{""n1_violation"": 12, ""ac_opf_failed"": 3}"
+acopf,demand_16.6_GW,15,0,0.0,1.1446355666654806,,"{""ac_opf_failed"": 14, ""n1_violation"": 1}"
+acopf,demand_16.8_GW,15,0,0.0,1.2480017733139297,,"{""ac_opf_failed"": 15}"
+scopf,all_upstream_test,75,41,0.5466666666666666,2.1513679266783097,,"{""acpf_not_converged"": 34}"
+scopf,screened_test,27,27,1.0,1.8592391555559717,,{}
+scopf,demand_16.0_GW,15,15,1.0,2.6622289866674693,,{}
+scopf,demand_16.2_GW,15,15,1.0,1.0781986533353727,,{}
+scopf,demand_16.4_GW,15,11,0.7333333333333333,1.5272267333542306,,"{""acpf_not_converged"": 4}"
+scopf,demand_16.6_GW,15,0,0.0,2.556139873356248,,"{""acpf_not_converged"": 15}"
+scopf,demand_16.8_GW,15,0,0.0,2.933045386678229,,"{""acpf_not_converged"": 15}"
+repair,all_upstream_test,75,28,0.37333333333333335,6.272856746685381,,"{""ac_voltage_repair_failed"": 32, ""linear_projection_failed"": 15}"
+repair,screened_test,27,27,1.0,2.756963470407451,,{}
+repair,demand_16.0_GW,15,14,0.9333333333333333,2.255958380022397,,"{""ac_voltage_repair_failed"": 1}"
+repair,demand_16.2_GW,15,9,0.6,4.228531713380168,,"{""ac_voltage_repair_failed"": 6}"
+repair,demand_16.4_GW,15,5,0.3333333333333333,6.685800826689229,,"{""ac_voltage_repair_failed"": 10}"
+repair,demand_16.6_GW,15,0,0.0,17.578639173321427,,"{""ac_voltage_repair_failed"": 15}"
+repair,demand_16.8_GW,15,0,0.0,0.6153536400136849,,"{""linear_projection_failed"": 15}"
