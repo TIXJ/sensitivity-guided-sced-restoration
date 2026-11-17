@@ -1,6 +1,10 @@
 # Reproduce and Inspect the Reported Results
 
-## Validated Entry Points
+## Physical Experiments
+
+Use `code/analysis/physical_reproduce.py` to compute policy actions, run AC/LODF checks, and invoke optimization from distributed inputs. [PHYSICAL_REPRODUCTION.md](PHYSICAL_REPRODUCTION.md) contains commands, checked outcomes, full-training recipes, and timing modes. [PHYSICAL_VALIDATION.json](PHYSICAL_VALIDATION.json) records the fresh physical checks separately from historical paper results.
+
+## Saved-Record Entry Points
 
 From the repository root:
 
@@ -32,7 +36,7 @@ Use the LaTeX labels because pagination and table numbers can change. All table 
 | `tab:revision_stress`, `tab:final_initializer`, `tab:revision_fallback` | stored condition/initialization/fallback records | `evaluate_revision.py`, `compare_initialization_workflows.py`, joint-fallback scripts |
 | `tab:case39`, `tab:case118`, small-system action and timing tables | `results/case39_*.json`, `results/case118_*.json` | small-case evaluation scripts in `code/analysis/` and `code/pipeline/` |
 
-Archived experiment scripts document the original physical protocol. They are not all portable commands in this distribution: they expect the author project layout and original source/data hashes. Do not bypass hash assertions. Recreating that layout and revalidating relocated provenance is required before a fresh physical run; timings on another machine are new measurements, not expected exact reproductions.
+The physical wrapper creates and verifies the required relative layout in an independent runtime snapshot. Archived scripts also document earlier protocols and document-generation steps; they are not all standalone portable commands. Keep their historical provenance hashes intact. Use the supported physical entry points and their distribution-bound inventory rather than disabling old assertions. Timings on another machine are new measurements, not expected exact reproductions.
 
 ## Expected Saved-Record Results
 

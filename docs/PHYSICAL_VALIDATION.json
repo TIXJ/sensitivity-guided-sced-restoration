@@ -1,0 +1,182 @@
+{
+  "scope": "Fresh physical inference/solves in the existing recorded environment. No clean-install or full retraining claim. Instrumented concurrent checks are not timing replications.",
+  "tests": {
+    "sac75": {
+      "result_sha256": "0e57e5c6d05864c4eefb831ec477ef7fd2718d6ae0b55aef1f74c83d5370b42d",
+      "rows": 75,
+      "actual_solver_calls": {
+        "runpp_calls": 829,
+        "runopp_calls": 0
+      },
+      "policy_forward_calls": 1773,
+      "denied_inputs": [],
+      "receipt_completed": true,
+      "accepted": 44,
+      "same_ids_pass_flags_steps_reasons_as_paper": true
+    },
+    "ddpg75": {
+      "result_sha256": "eeadaf09615125c9d44cacc0da06db1fbbf7c5ed5ca4e6c7f7d2b23e58645014",
+      "rows": 75,
+      "actual_solver_calls": {
+        "runpp_calls": 966,
+        "runopp_calls": 0
+      },
+      "policy_forward_calls": 1924,
+      "denied_inputs": [],
+      "receipt_completed": true,
+      "accepted": 43,
+      "same_ids_pass_flags_steps_reasons_as_paper": true
+    },
+    "td375": {
+      "result_sha256": "afe83b453a5f00b21cbb3fa814cb40425f3a6cc72ef183fae54bcef8a0e7c6f1",
+      "rows": 75,
+      "actual_solver_calls": {
+        "runpp_calls": 929,
+        "runopp_calls": 0
+      },
+      "policy_forward_calls": 1873,
+      "denied_inputs": [],
+      "receipt_completed": true,
+      "accepted": 45,
+      "same_ids_pass_flags_steps_reasons_as_paper": true
+    },
+    "full6875": {
+      "result_sha256": "5f70e72c925f24823bd01303f0f3940b2b1550ed33c80a28980123c5860eab3d",
+      "rows": 75,
+      "actual_solver_calls": {
+        "runpp_calls": 1513,
+        "runopp_calls": 0
+      },
+      "policy_forward_calls": 2457,
+      "denied_inputs": [],
+      "receipt_completed": true,
+      "accepted": 30,
+      "same_ids_pass_flags_steps_reasons_as_paper": true
+    },
+    "historical": {
+      "result_sha256": "7cb656007acf343a784612bdb473ef395e370eb443ed9b7a4aed64f11f166c1e",
+      "rows": 150,
+      "actual_solver_calls": {
+        "runpp_calls": 357,
+        "runopp_calls": 247
+      },
+      "policy_forward_calls": 57,
+      "denied_inputs": [],
+      "receipt_completed": true,
+      "repeats": 1,
+      "accepted_per_arm": 60,
+      "same_accepted_ids_as_paper": true
+    },
+    "spatial": {
+      "result_sha256": "1d096db60ea25921f632b0eca8c1ff37b33eb81366807ed1e5f30152e464a484",
+      "rows": 200,
+      "actual_solver_calls": {
+        "runpp_calls": 670,
+        "runopp_calls": 191
+      },
+      "policy_forward_calls": 143,
+      "denied_inputs": [],
+      "receipt_completed": true,
+      "repeats": 1,
+      "accepted_per_arm": 93,
+      "same_accepted_ids_as_paper": true
+    },
+    "case39": {
+      "result_sha256": "31381c178ba972b1ffcb0162dffd0c87f0eacdcae1388c4573c672a376e93476",
+      "rows": 90,
+      "actual_solver_calls": {
+        "runpp_calls": 532,
+        "runopp_calls": 1
+      },
+      "policy_forward_calls": 37,
+      "denied_inputs": [],
+      "receipt_completed": true,
+      "accepted_by_mode": {
+        "myopic_search": 30,
+        "policy": 30,
+        "prediction_only": 12
+      }
+    },
+    "case118": {
+      "result_sha256": "2bc5f63af95cd84145d9959fbc338ad01d591eafccaaaa4abad1827158e88b6a",
+      "rows": 60,
+      "actual_solver_calls": {
+        "runpp_calls": 987,
+        "runopp_calls": 1
+      },
+      "policy_forward_calls": 216,
+      "denied_inputs": [],
+      "receipt_completed": true,
+      "accepted_by_mode": {
+        "myopic_search": 20,
+        "policy": 20
+      }
+    },
+    "ac882": {
+      "result_sha256": "da2ec1a3b16d0f4a1144b27bcf3b4d157dbab30b763d8b83926062fa44e04016",
+      "rows": 882,
+      "actual_solver_calls": {
+        "runpp_calls": 975,
+        "runopp_calls": 0
+      },
+      "policy_forward_calls": 0,
+      "denied_inputs": [],
+      "receipt_completed": true,
+      "counts_total_pass_nonconvergent_voltage": [
+        882,
+        536,
+        46,
+        300
+      ],
+      "same_pair_level_outcomes_as_paper": true
+    },
+    "training_smoke": {
+      "outer_iterations": 1,
+      "episodes": 1,
+      "optimizer_step_calls": 2,
+      "actual_runpp_calls": 910,
+      "training_result_sha256": "aaee7a0c00be0e1f3aaf8fc9023bdade9df474b1d11d819e7a6008c3393e4f8a",
+      "new_actor_sha256": "3ff3c50c90c905ed70d242848430a1bfae99e73f1840e6fd2a83c6b726cd7623",
+      "scope": "Real actor/critic update; no convergence or full training claim."
+    },
+    "repair27": {
+      "result_sha256": "8a10135af11f36c7eda3d2c4f356a1e1717b8028c8ed5b8112c57f4e1a3a8cab",
+      "rows": 27,
+      "actual_solver_calls": {
+        "runpp_calls": 1818,
+        "runopp_calls": 0
+      },
+      "policy_forward_calls": 0,
+      "denied_inputs": [],
+      "receipt_completed": true,
+      "accepted": 27,
+      "same_case_level_acceptance_as_paper": true
+    },
+    "acopf27": {
+      "result_sha256": "d956c925d6ad013df3d6f073724890d0f55a4e7dd6b1a43ac6a64c363ab6d7d3",
+      "rows": 27,
+      "actual_solver_calls": {
+        "runpp_calls": 27,
+        "runopp_calls": 54
+      },
+      "policy_forward_calls": 0,
+      "denied_inputs": [],
+      "receipt_completed": true,
+      "accepted": 0,
+      "same_case_level_acceptance_as_paper": true
+    },
+    "scopf27": {
+      "result_sha256": "005a26a0a6de44809091d78f9593e695eb8d7dc755adb20f987152dcfd51e4ba",
+      "rows": 27,
+      "actual_solver_calls": {
+        "runpp_calls": 86,
+        "runopp_calls": 27
+      },
+      "policy_forward_calls": 0,
+      "denied_inputs": [],
+      "receipt_completed": true,
+      "accepted": 27,
+      "same_case_level_acceptance_as_paper": true
+    }
+  }
+}

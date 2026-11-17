@@ -1,0 +1,866 @@
+{
+  "ac_every10_full": {
+    "checkpoint": "models/revision_runs/ac_every10/best_actor.pth",
+    "checkpoint_sha256": "08646ffbd07ee90f38616dea8f1e6d0d342be62763f53e2ef6b5c146b9accd29",
+    "arguments": {
+      "method": "sac",
+      "family": "physics",
+      "dimension": 32,
+      "shifts": 12,
+      "initialization": "gat",
+      "stress": "none",
+      "vmin": 0.933,
+      "vmax": 1.09,
+      "radius": 40.0,
+      "ac_every": 10
+    }
+  },
+  "ac_every1_full": {
+    "checkpoint": "models/revision_runs/ac_every1/best_actor.pth",
+    "checkpoint_sha256": "3c8ed70f2e7e75273cf3a06563d6302eb893dc527693cef8f3cde11d9788e3e9",
+    "arguments": {
+      "method": "sac",
+      "family": "physics",
+      "dimension": 32,
+      "shifts": 12,
+      "initialization": "gat",
+      "stress": "none",
+      "vmin": 0.933,
+      "vmax": 1.09,
+      "radius": 40.0,
+      "ac_every": 1
+    }
+  },
+  "bonus_double_full": {
+    "checkpoint": "models/revision_runs/bonus_double/best_actor.pth",
+    "checkpoint_sha256": "95b3aa06e8c9395fbae2b32b8f8a7d8d936aefc347bd8c28e4604ffa40855611",
+    "arguments": {
+      "method": "sac",
+      "family": "physics",
+      "dimension": 32,
+      "shifts": 12,
+      "initialization": "gat",
+      "stress": "none",
+      "vmin": 0.933,
+      "vmax": 1.09,
+      "radius": 40.0,
+      "ac_every": 5
+    }
+  },
+  "bonus_half_full": {
+    "checkpoint": "models/revision_runs/bonus_half/best_actor.pth",
+    "checkpoint_sha256": "ea950274b66a830f90e886c68982ac42ec5018a22e351d6acafcf14ad62d9dc5",
+    "arguments": {
+      "method": "sac",
+      "family": "physics",
+      "dimension": 32,
+      "shifts": 12,
+      "initialization": "gat",
+      "stress": "none",
+      "vmin": 0.933,
+      "vmax": 1.09,
+      "radius": 40.0,
+      "ac_every": 5
+    }
+  },
+  "ddpg_seed1_full": {
+    "checkpoint": "models/revision_runs/ddpg_seed1/best_actor.pth",
+    "checkpoint_sha256": "8592dfc07b90f51c32784c87d2ddfd6adf27f6065b86ea08672b4e8229b8c8e7",
+    "arguments": {
+      "method": "ddpg",
+      "family": "physics",
+      "dimension": 32,
+      "shifts": 12,
+      "initialization": "gat",
+      "stress": "none",
+      "vmin": 0.933,
+      "vmax": 1.09,
+      "radius": 40.0,
+      "ac_every": 5
+    }
+  },
+  "ddpg_seed2_full": {
+    "checkpoint": "models/revision_runs/ddpg_seed2/best_actor.pth",
+    "checkpoint_sha256": "72c2a63bbccea601bde007222158b49207854c44f460bab75bd4d8396ad60382",
+    "arguments": {
+      "method": "ddpg",
+      "family": "physics",
+      "dimension": 32,
+      "shifts": 12,
+      "initialization": "gat",
+      "stress": "none",
+      "vmin": 0.933,
+      "vmax": 1.09,
+      "radius": 40.0,
+      "ac_every": 5
+    }
+  },
+  "dim16_full": {
+    "checkpoint": "models/revision_runs/dim16/best_actor.pth",
+    "checkpoint_sha256": "e62dbb7bbdda758f186f829ce8f6c73a8fc5b6b0bffa30fb1c57b9e7732ef693",
+    "arguments": {
+      "method": "sac",
+      "family": "physics",
+      "dimension": 16,
+      "shifts": 6,
+      "initialization": "gat",
+      "stress": "none",
+      "vmin": 0.933,
+      "vmax": 1.09,
+      "radius": 40.0,
+      "ac_every": 5
+    }
+  },
+  "dim24_full": {
+    "checkpoint": "models/revision_runs/dim24/best_actor.pth",
+    "checkpoint_sha256": "33099f7d5562462da0616df4519ed029f33bd94ff62b492422edd4ab32d765a1",
+    "arguments": {
+      "method": "sac",
+      "family": "physics",
+      "dimension": 24,
+      "shifts": 9,
+      "initialization": "gat",
+      "stress": "none",
+      "vmin": 0.933,
+      "vmax": 1.09,
+      "radius": 40.0,
+      "ac_every": 5
+    }
+  },
+  "dim40_full": {
+    "checkpoint": "models/revision_runs/dim40/best_actor.pth",
+    "checkpoint_sha256": "5640e86ed57789dc53bc6f9bcb452dfec2cd8463883ff944b7bb4686f2d10a3c",
+    "arguments": {
+      "method": "sac",
+      "family": "physics",
+      "dimension": 40,
+      "shifts": 15,
+      "initialization": "gat",
+      "stress": "none",
+      "vmin": 0.933,
+      "vmax": 1.09,
+      "radius": 40.0,
+      "ac_every": 5
+    }
+  },
+  "full68_seed1_full": {
+    "checkpoint": "models/revision_runs/full68_seed1/best_actor.pth",
+    "checkpoint_sha256": "6bd234febadf46784a2f85b1e99f6e8fb824b70a74d1b3c2fca70a1a29d4fff9",
+    "arguments": {
+      "method": "full68",
+      "family": "physics",
+      "dimension": 32,
+      "shifts": 12,
+      "initialization": "gat",
+      "stress": "none",
+      "vmin": 0.933,
+      "vmax": 1.09,
+      "radius": 40.0,
+      "ac_every": 5
+    }
+  },
+  "full68_seed2_full": {
+    "checkpoint": "models/revision_runs/full68_seed2/best_actor.pth",
+    "checkpoint_sha256": "f48b8eada4e39eb68edc0acbcb3656c92ac3e3b19415b9a2dc554d43ed065576",
+    "arguments": {
+      "method": "full68",
+      "family": "physics",
+      "dimension": 32,
+      "shifts": 12,
+      "initialization": "gat",
+      "stress": "none",
+      "vmin": 0.933,
+      "vmax": 1.09,
+      "radius": 40.0,
+      "ac_every": 5
+    }
+  },
+  "full_ddpg": {
+    "checkpoint": "models/rl_ddpg_fixed_slack_v1_p40_raw_action_v9/best_actor.pth",
+    "checkpoint_sha256": "41b937bfd64f206b2f0083b03f56210dddb2aa62dd8bc111fd299a183824ef9d",
+    "arguments": {
+      "method": "ddpg",
+      "family": "physics",
+      "dimension": 32,
+      "shifts": 12,
+      "initialization": "gat",
+      "stress": "none",
+      "vmin": 0.933,
+      "vmax": 1.09,
+      "radius": 40.0,
+      "ac_every": 5
+    }
+  },
+  "full_full68": {
+    "checkpoint": "models/rl_full68_fixed_slack_v1_p40_raw_action_v4/best_actor.pth",
+    "checkpoint_sha256": "18ba4d045478c88f70ee1a6b0da04d6fc616699cb3f11f29421e92874d7605ff",
+    "arguments": {
+      "method": "full68",
+      "family": "physics",
+      "dimension": 32,
+      "shifts": 12,
+      "initialization": "gat",
+      "stress": "none",
+      "vmin": 0.933,
+      "vmax": 1.09,
+      "radius": 40.0,
+      "ac_every": 5
+    }
+  },
+  "full_sac": {
+    "checkpoint": "models/rl_sac_fixed_slack_v1_v31_p40_voltage_sensitivity/best_actor.pth",
+    "checkpoint_sha256": "8861bcfb4eab1db6f362a94cabf1babab4580f0b89831cb485dde569582c5514",
+    "arguments": {
+      "method": "sac",
+      "family": "physics",
+      "dimension": 32,
+      "shifts": 12,
+      "initialization": "gat",
+      "stress": "none",
+      "vmin": 0.933,
+      "vmax": 1.09,
+      "radius": 40.0,
+      "ac_every": 5
+    }
+  },
+  "full_td3": {
+    "checkpoint": "models/rl_td3_fixed_slack_v1_p40_unified_noise_v5/best_actor.pth",
+    "checkpoint_sha256": "30ed9d0da66cd9ceebc6176c5489a853af9424c81cd0f4932a9f1f974faec669",
+    "arguments": {
+      "method": "td3",
+      "family": "physics",
+      "dimension": 32,
+      "shifts": 12,
+      "initialization": "gat",
+      "stress": "none",
+      "vmin": 0.933,
+      "vmax": 1.09,
+      "radius": 40.0,
+      "ac_every": 5
+    }
+  },
+  "keys32_full": {
+    "checkpoint": "models/revision_runs/keys32/best_actor.pth",
+    "checkpoint_sha256": "c1fc36044d2b255080da7598c8f56062ea9d3b7c2b3fac63d2c49af36cdf9a6c",
+    "arguments": {
+      "method": "sac",
+      "family": "keys",
+      "dimension": 32,
+      "shifts": 12,
+      "initialization": "gat",
+      "stress": "none",
+      "vmin": 0.933,
+      "vmax": 1.09,
+      "radius": 40.0,
+      "ac_every": 5
+    }
+  },
+  "modes32_full": {
+    "checkpoint": "models/revision_runs/modes32/best_actor.pth",
+    "checkpoint_sha256": "8a6b241ad927112e2a033ba8b9ce14c8edc1eacd5883c8a571b7d1ca9a9900af",
+    "arguments": {
+      "method": "sac",
+      "family": "modes",
+      "dimension": 32,
+      "shifts": 12,
+      "initialization": "gat",
+      "stress": "none",
+      "vmin": 0.933,
+      "vmax": 1.09,
+      "radius": 40.0,
+      "ac_every": 5
+    }
+  },
+  "modes32_seed1_v1_full": {
+    "checkpoint": "models/revision_runs/modes32_seed1_v1/best_actor.pth",
+    "checkpoint_sha256": "b839fd016bf5fe5df6261222465d00ad034359533aa6840f6bc4f4958d7d5f87",
+    "arguments": {
+      "method": "sac",
+      "family": "modes",
+      "dimension": 32,
+      "shifts": 12,
+      "initialization": "gat",
+      "stress": "none",
+      "vmin": 0.933,
+      "vmax": 1.09,
+      "radius": 40.0,
+      "ac_every": 5
+    }
+  },
+  "modes32_seed2_v1_full": {
+    "checkpoint": "models/revision_runs/modes32_seed2_v1/best_actor.pth",
+    "checkpoint_sha256": "0eacade1abaaf2598b7dc1ed7cfd6ea08340ad8e73feef3f41760c10db78c2fa",
+    "arguments": {
+      "method": "sac",
+      "family": "modes",
+      "dimension": 32,
+      "shifts": 12,
+      "initialization": "gat",
+      "stress": "none",
+      "vmin": 0.933,
+      "vmax": 1.09,
+      "radius": 40.0,
+      "ac_every": 5
+    }
+  },
+  "n1_double_full": {
+    "checkpoint": "models/revision_runs/n1_double/best_actor.pth",
+    "checkpoint_sha256": "d566076ee42798cb5838b36290fc17006a32fe42a70d85d07a61785625a7d588",
+    "arguments": {
+      "method": "sac",
+      "family": "physics",
+      "dimension": 32,
+      "shifts": 12,
+      "initialization": "gat",
+      "stress": "none",
+      "vmin": 0.933,
+      "vmax": 1.09,
+      "radius": 40.0,
+      "ac_every": 5
+    }
+  },
+  "n1_half_full": {
+    "checkpoint": "models/revision_runs/n1_half/best_actor.pth",
+    "checkpoint_sha256": "19168bc89527bbf30d5a50b00d27bbbf6e7b23cbbc42157bce6d38dda6eeb19a",
+    "arguments": {
+      "method": "sac",
+      "family": "physics",
+      "dimension": 32,
+      "shifts": 12,
+      "initialization": "gat",
+      "stress": "none",
+      "vmin": 0.933,
+      "vmax": 1.09,
+      "radius": 40.0,
+      "ac_every": 5
+    }
+  },
+  "radius20_full": {
+    "checkpoint": "models/revision_runs/radius20/best_actor.pth",
+    "checkpoint_sha256": "ba386d74d566b04f998bba33def78c1cb8272b946a41b512c29ac5ee6317dac6",
+    "arguments": {
+      "method": "sac",
+      "family": "physics",
+      "dimension": 32,
+      "shifts": 12,
+      "initialization": "gat",
+      "stress": "none",
+      "vmin": 0.933,
+      "vmax": 1.09,
+      "radius": 20.0,
+      "ac_every": 5
+    }
+  },
+  "radius60_full": {
+    "checkpoint": "models/revision_runs/radius60/best_actor.pth",
+    "checkpoint_sha256": "dfdbe9a0ed1b1bef55a62d26e0f576884c9e766d08729c8d2cd2528f1ef9a029",
+    "arguments": {
+      "method": "sac",
+      "family": "physics",
+      "dimension": 32,
+      "shifts": 12,
+      "initialization": "gat",
+      "stress": "none",
+      "vmin": 0.933,
+      "vmax": 1.09,
+      "radius": 60.0,
+      "ac_every": 5
+    }
+  },
+  "random32_full": {
+    "checkpoint": "models/revision_runs/random32/best_actor.pth",
+    "checkpoint_sha256": "942bde676e10d241adc0aefc090c3f8d78352ef2a833354f501aa5c766228bee",
+    "arguments": {
+      "method": "sac",
+      "family": "random",
+      "dimension": 32,
+      "shifts": 12,
+      "initialization": "gat",
+      "stress": "none",
+      "vmin": 0.933,
+      "vmax": 1.09,
+      "radius": 40.0,
+      "ac_every": 5
+    }
+  },
+  "random32_seed1_v1_full": {
+    "checkpoint": "models/revision_runs/random32_seed1_v1/best_actor.pth",
+    "checkpoint_sha256": "2d8b79f3845a3529c980675669cc6a349418a16311642cd4759555e69b9d4a4c",
+    "arguments": {
+      "method": "sac",
+      "family": "random",
+      "dimension": 32,
+      "shifts": 12,
+      "initialization": "gat",
+      "stress": "none",
+      "vmin": 0.933,
+      "vmax": 1.09,
+      "radius": 40.0,
+      "ac_every": 5
+    }
+  },
+  "random32_seed2_v1_full": {
+    "checkpoint": "models/revision_runs/random32_seed2_v1/best_actor.pth",
+    "checkpoint_sha256": "c4593128c15f044fd0fb38be97e059364ff639d1ec0cf971c7a99b922b6bdf16",
+    "arguments": {
+      "method": "sac",
+      "family": "random",
+      "dimension": 32,
+      "shifts": 12,
+      "initialization": "gat",
+      "stress": "none",
+      "vmin": 0.933,
+      "vmax": 1.09,
+      "radius": 40.0,
+      "ac_every": 5
+    }
+  },
+  "sac_seed1_full": {
+    "checkpoint": "models/revision_runs/sac_seed1/best_actor.pth",
+    "checkpoint_sha256": "de6736932439193038d262d17668820d89363c117c99ae2ca960886c6e78d6d7",
+    "arguments": {
+      "method": "sac",
+      "family": "physics",
+      "dimension": 32,
+      "shifts": 12,
+      "initialization": "gat",
+      "stress": "none",
+      "vmin": 0.933,
+      "vmax": 1.09,
+      "radius": 40.0,
+      "ac_every": 5
+    }
+  },
+  "sac_seed2_full": {
+    "checkpoint": "models/revision_runs/sac_seed2/best_actor.pth",
+    "checkpoint_sha256": "d677c488969705001334f0e27a4f37f6180f781c5bee1ccb4a4d62c98f9e2990",
+    "arguments": {
+      "method": "sac",
+      "family": "physics",
+      "dimension": 32,
+      "shifts": 12,
+      "initialization": "gat",
+      "stress": "none",
+      "vmin": 0.933,
+      "vmax": 1.09,
+      "radius": 40.0,
+      "ac_every": 5
+    }
+  },
+  "smoke_ddpg": {
+    "checkpoint": "models/rl_ddpg_fixed_slack_v1_p40_raw_action_v9/best_actor.pth",
+    "checkpoint_sha256": "41b937bfd64f206b2f0083b03f56210dddb2aa62dd8bc111fd299a183824ef9d",
+    "arguments": {
+      "method": "ddpg",
+      "family": "physics",
+      "dimension": 32,
+      "shifts": 12,
+      "initialization": "gat",
+      "stress": "none",
+      "vmin": 0.933,
+      "vmax": 1.09,
+      "radius": 40.0,
+      "ac_every": 5
+    }
+  },
+  "smoke_full68": {
+    "checkpoint": "models/rl_full68_fixed_slack_v1_p40_raw_action_v4/best_actor.pth",
+    "checkpoint_sha256": "18ba4d045478c88f70ee1a6b0da04d6fc616699cb3f11f29421e92874d7605ff",
+    "arguments": {
+      "method": "full68",
+      "family": "physics",
+      "dimension": 32,
+      "shifts": 12,
+      "initialization": "gat",
+      "stress": "none",
+      "vmin": 0.933,
+      "vmax": 1.09,
+      "radius": 40.0,
+      "ac_every": 5
+    }
+  },
+  "smoke_regional": {
+    "checkpoint": "models/rl_sac_fixed_slack_v1_v31_p40_voltage_sensitivity/best_actor.pth",
+    "checkpoint_sha256": "8861bcfb4eab1db6f362a94cabf1babab4580f0b89831cb485dde569582c5514",
+    "arguments": {
+      "method": "sac",
+      "family": "physics",
+      "dimension": 32,
+      "shifts": 12,
+      "initialization": "gat",
+      "stress": "regional",
+      "vmin": 0.933,
+      "vmax": 1.09,
+      "radius": 40.0,
+      "ac_every": 5
+    }
+  },
+  "smoke_sac": {
+    "checkpoint": "models/rl_sac_fixed_slack_v1_v31_p40_voltage_sensitivity/best_actor.pth",
+    "checkpoint_sha256": "8861bcfb4eab1db6f362a94cabf1babab4580f0b89831cb485dde569582c5514",
+    "arguments": {
+      "method": "sac",
+      "family": "physics",
+      "dimension": 32,
+      "shifts": 12,
+      "initialization": "gat",
+      "stress": "none",
+      "vmin": 0.933,
+      "vmax": 1.09,
+      "radius": 40.0,
+      "ac_every": 5
+    }
+  },
+  "smoke_td3": {
+    "checkpoint": "models/rl_td3_fixed_slack_v1_p40_unified_noise_v5/best_actor.pth",
+    "checkpoint_sha256": "30ed9d0da66cd9ceebc6176c5489a853af9424c81cd0f4932a9f1f974faec669",
+    "arguments": {
+      "method": "td3",
+      "family": "physics",
+      "dimension": 32,
+      "shifts": 12,
+      "initialization": "gat",
+      "stress": "none",
+      "vmin": 0.933,
+      "vmax": 1.09,
+      "radius": 40.0,
+      "ac_every": 5
+    }
+  },
+  "split20_12_full": {
+    "checkpoint": "models/revision_runs/split20_12/best_actor.pth",
+    "checkpoint_sha256": "fc4535fb1e2e8097a5b02dc296872be7e414eaf755a80a354c229c68131cf403",
+    "arguments": {
+      "method": "sac",
+      "family": "physics",
+      "dimension": 32,
+      "shifts": 20,
+      "initialization": "gat",
+      "stress": "none",
+      "vmin": 0.933,
+      "vmax": 1.09,
+      "radius": 40.0,
+      "ac_every": 5
+    }
+  },
+  "split8_24_full": {
+    "checkpoint": "models/revision_runs/split8_24/best_actor.pth",
+    "checkpoint_sha256": "9c1203b35dfc45259086534dba711a7b3cd4ac324bae7462bc483e981238fd98",
+    "arguments": {
+      "method": "sac",
+      "family": "physics",
+      "dimension": 32,
+      "shifts": 8,
+      "initialization": "gat",
+      "stress": "none",
+      "vmin": 0.933,
+      "vmax": 1.09,
+      "radius": 40.0,
+      "ac_every": 5
+    }
+  },
+  "start_economic": {
+    "checkpoint": "models/rl_sac_fixed_slack_v1_v31_p40_voltage_sensitivity/best_actor.pth",
+    "checkpoint_sha256": "8861bcfb4eab1db6f362a94cabf1babab4580f0b89831cb485dde569582c5514",
+    "arguments": {
+      "method": "sac",
+      "family": "physics",
+      "dimension": 32,
+      "shifts": 12,
+      "initialization": "economic",
+      "stress": "none",
+      "vmin": 0.933,
+      "vmax": 1.09,
+      "radius": 40.0,
+      "ac_every": 5
+    }
+  },
+  "start_economic_v2": {
+    "checkpoint": "models/rl_sac_fixed_slack_v1_v31_p40_voltage_sensitivity/best_actor.pth",
+    "checkpoint_sha256": "8861bcfb4eab1db6f362a94cabf1babab4580f0b89831cb485dde569582c5514",
+    "arguments": {
+      "method": "sac",
+      "family": "physics",
+      "dimension": 32,
+      "shifts": 12,
+      "initialization": "economic",
+      "stress": "none",
+      "vmin": 0.933,
+      "vmax": 1.09,
+      "radius": 40.0,
+      "ac_every": 5
+    }
+  },
+  "start_label": {
+    "checkpoint": "models/rl_sac_fixed_slack_v1_v31_p40_voltage_sensitivity/best_actor.pth",
+    "checkpoint_sha256": "8861bcfb4eab1db6f362a94cabf1babab4580f0b89831cb485dde569582c5514",
+    "arguments": {
+      "method": "sac",
+      "family": "physics",
+      "dimension": 32,
+      "shifts": 12,
+      "initialization": "label",
+      "stress": "none",
+      "vmin": 0.933,
+      "vmax": 1.09,
+      "radius": 40.0,
+      "ac_every": 5
+    }
+  },
+  "start_label_v2": {
+    "checkpoint": "models/rl_sac_fixed_slack_v1_v31_p40_voltage_sensitivity/best_actor.pth",
+    "checkpoint_sha256": "8861bcfb4eab1db6f362a94cabf1babab4580f0b89831cb485dde569582c5514",
+    "arguments": {
+      "method": "sac",
+      "family": "physics",
+      "dimension": 32,
+      "shifts": 12,
+      "initialization": "label",
+      "stress": "none",
+      "vmin": 0.933,
+      "vmax": 1.09,
+      "radius": 40.0,
+      "ac_every": 5
+    }
+  },
+  "start_previous": {
+    "checkpoint": "models/rl_sac_fixed_slack_v1_v31_p40_voltage_sensitivity/best_actor.pth",
+    "checkpoint_sha256": "8861bcfb4eab1db6f362a94cabf1babab4580f0b89831cb485dde569582c5514",
+    "arguments": {
+      "method": "sac",
+      "family": "physics",
+      "dimension": 32,
+      "shifts": 12,
+      "initialization": "previous",
+      "stress": "none",
+      "vmin": 0.933,
+      "vmax": 1.09,
+      "radius": 40.0,
+      "ac_every": 5
+    }
+  },
+  "start_previous_v2": {
+    "checkpoint": "models/rl_sac_fixed_slack_v1_v31_p40_voltage_sensitivity/best_actor.pth",
+    "checkpoint_sha256": "8861bcfb4eab1db6f362a94cabf1babab4580f0b89831cb485dde569582c5514",
+    "arguments": {
+      "method": "sac",
+      "family": "physics",
+      "dimension": 32,
+      "shifts": 12,
+      "initialization": "previous",
+      "stress": "none",
+      "vmin": 0.933,
+      "vmax": 1.09,
+      "radius": 40.0,
+      "ac_every": 5
+    }
+  },
+  "stress_demand-high": {
+    "checkpoint": "models/rl_sac_fixed_slack_v1_v31_p40_voltage_sensitivity/best_actor.pth",
+    "checkpoint_sha256": "8861bcfb4eab1db6f362a94cabf1babab4580f0b89831cb485dde569582c5514",
+    "arguments": {
+      "method": "sac",
+      "family": "physics",
+      "dimension": 32,
+      "shifts": 12,
+      "initialization": "gat",
+      "stress": "demand-high",
+      "vmin": 0.933,
+      "vmax": 1.09,
+      "radius": 40.0,
+      "ac_every": 5
+    }
+  },
+  "stress_demand-low": {
+    "checkpoint": "models/rl_sac_fixed_slack_v1_v31_p40_voltage_sensitivity/best_actor.pth",
+    "checkpoint_sha256": "8861bcfb4eab1db6f362a94cabf1babab4580f0b89831cb485dde569582c5514",
+    "arguments": {
+      "method": "sac",
+      "family": "physics",
+      "dimension": 32,
+      "shifts": 12,
+      "initialization": "gat",
+      "stress": "demand-low",
+      "vmin": 0.933,
+      "vmax": 1.09,
+      "radius": 40.0,
+      "ac_every": 5
+    }
+  },
+  "stress_reactive": {
+    "checkpoint": "models/rl_sac_fixed_slack_v1_v31_p40_voltage_sensitivity/best_actor.pth",
+    "checkpoint_sha256": "8861bcfb4eab1db6f362a94cabf1babab4580f0b89831cb485dde569582c5514",
+    "arguments": {
+      "method": "sac",
+      "family": "physics",
+      "dimension": 32,
+      "shifts": 12,
+      "initialization": "gat",
+      "stress": "reactive",
+      "vmin": 0.933,
+      "vmax": 1.09,
+      "radius": 40.0,
+      "ac_every": 5
+    }
+  },
+  "stress_regional": {
+    "checkpoint": "models/rl_sac_fixed_slack_v1_v31_p40_voltage_sensitivity/best_actor.pth",
+    "checkpoint_sha256": "8861bcfb4eab1db6f362a94cabf1babab4580f0b89831cb485dde569582c5514",
+    "arguments": {
+      "method": "sac",
+      "family": "physics",
+      "dimension": 32,
+      "shifts": 12,
+      "initialization": "gat",
+      "stress": "regional",
+      "vmin": 0.933,
+      "vmax": 1.09,
+      "radius": 40.0,
+      "ac_every": 5
+    }
+  },
+  "stress_renewable": {
+    "checkpoint": "models/rl_sac_fixed_slack_v1_v31_p40_voltage_sensitivity/best_actor.pth",
+    "checkpoint_sha256": "8861bcfb4eab1db6f362a94cabf1babab4580f0b89831cb485dde569582c5514",
+    "arguments": {
+      "method": "sac",
+      "family": "physics",
+      "dimension": 32,
+      "shifts": 12,
+      "initialization": "gat",
+      "stress": "renewable",
+      "vmin": 0.933,
+      "vmax": 1.09,
+      "radius": 40.0,
+      "ac_every": 5
+    }
+  },
+  "stress_renewable_v2": {
+    "checkpoint": "models/rl_sac_fixed_slack_v1_v31_p40_voltage_sensitivity/best_actor.pth",
+    "checkpoint_sha256": "8861bcfb4eab1db6f362a94cabf1babab4580f0b89831cb485dde569582c5514",
+    "arguments": {
+      "method": "sac",
+      "family": "physics",
+      "dimension": 32,
+      "shifts": 12,
+      "initialization": "gat",
+      "stress": "renewable",
+      "vmin": 0.933,
+      "vmax": 1.09,
+      "radius": 40.0,
+      "ac_every": 5
+    }
+  },
+  "td3_seed1_full": {
+    "checkpoint": "models/revision_runs/td3_seed1/best_actor.pth",
+    "checkpoint_sha256": "230777e8db17987cc5e29feb1a5b48e78f59b1f555037cf48a42d1e5c5b1569f",
+    "arguments": {
+      "method": "td3",
+      "family": "physics",
+      "dimension": 32,
+      "shifts": 12,
+      "initialization": "gat",
+      "stress": "none",
+      "vmin": 0.933,
+      "vmax": 1.09,
+      "radius": 40.0,
+      "ac_every": 5
+    }
+  },
+  "td3_seed2_full": {
+    "checkpoint": "models/revision_runs/td3_seed2/best_actor.pth",
+    "checkpoint_sha256": "e0175f1a3f67a48f658a359e7aa7e8aa79d29d3df6a01f202a368089a9913e1e",
+    "arguments": {
+      "method": "td3",
+      "family": "physics",
+      "dimension": 32,
+      "shifts": 12,
+      "initialization": "gat",
+      "stress": "none",
+      "vmin": 0.933,
+      "vmax": 1.09,
+      "radius": 40.0,
+      "ac_every": 5
+    }
+  },
+  "tight_sac_094_108_seed42_v1_full": {
+    "checkpoint": "models/revision_runs/tight_sac_094_108_seed42_v1/best_actor.pth",
+    "checkpoint_sha256": "ffa20e079236eb9cbf5a5f1179db22d0ede51bba297fee8b285ed0b9b5df37cb",
+    "arguments": {
+      "method": "sac",
+      "family": "physics",
+      "dimension": 32,
+      "shifts": 12,
+      "initialization": "gat",
+      "stress": "none",
+      "vmin": 0.94,
+      "vmax": 1.08,
+      "radius": 40.0,
+      "ac_every": 5
+    }
+  },
+  "voltage_0.94_1.08": {
+    "checkpoint": "models/rl_sac_fixed_slack_v1_v31_p40_voltage_sensitivity/best_actor.pth",
+    "checkpoint_sha256": "8861bcfb4eab1db6f362a94cabf1babab4580f0b89831cb485dde569582c5514",
+    "arguments": {
+      "method": "sac",
+      "family": "physics",
+      "dimension": 32,
+      "shifts": 12,
+      "initialization": "gat",
+      "stress": "none",
+      "vmin": 0.94,
+      "vmax": 1.08,
+      "radius": 40.0,
+      "ac_every": 5
+    }
+  },
+  "voltage_0.95_1.05": {
+    "checkpoint": "models/rl_sac_fixed_slack_v1_v31_p40_voltage_sensitivity/best_actor.pth",
+    "checkpoint_sha256": "8861bcfb4eab1db6f362a94cabf1babab4580f0b89831cb485dde569582c5514",
+    "arguments": {
+      "method": "sac",
+      "family": "physics",
+      "dimension": 32,
+      "shifts": 12,
+      "initialization": "gat",
+      "stress": "none",
+      "vmin": 0.95,
+      "vmax": 1.05,
+      "radius": 40.0,
+      "ac_every": 5
+    }
+  },
+  "voltage_double_full": {
+    "checkpoint": "models/revision_runs/voltage_double/best_actor.pth",
+    "checkpoint_sha256": "f6aa1160060cf4af5b8685976bdd823f1574a023f85d1cfc7e7e54bc4ce3beae",
+    "arguments": {
+      "method": "sac",
+      "family": "physics",
+      "dimension": 32,
+      "shifts": 12,
+      "initialization": "gat",
+      "stress": "none",
+      "vmin": 0.933,
+      "vmax": 1.09,
+      "radius": 40.0,
+      "ac_every": 5
+    }
+  },
+  "voltage_half_full": {
+    "checkpoint": "models/revision_runs/voltage_half/best_actor.pth",
+    "checkpoint_sha256": "5beb98bb39e1f8442bb59fd92028ef7bbb7b556639c6ffe679095577119f8d8a",
+    "arguments": {
+      "method": "sac",
+      "family": "physics",
+      "dimension": 32,
+      "shifts": 12,
+      "initialization": "gat",
+      "stress": "none",
+      "vmin": 0.933,
+      "vmax": 1.09,
+      "radius": 40.0,
+      "ac_every": 5
+    }
+  }
+}

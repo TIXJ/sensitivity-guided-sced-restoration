@@ -7,6 +7,10 @@ numba==0.65.1
 matplotlib>=3.7
 pandas>=2.2
 networkx>=3
+gymnasium==1.2.3
+gurobipy==13.0.1
 reportlab>=4
-# Optional linear-SCED label generation: gurobipy==13.0.1.
-# Gurobi and its license must be obtained separately; neither is distributed here.
+# The legacy environment imports gurobipy even for stored-model evaluation.
+# A commercial/academic Gurobi license is needed only for Gurobi optimization
+# and label generation; the main pandapower/PYPOWER workflows do not use it.
+# No Gurobi license file or proprietary solver installation is distributed here.
