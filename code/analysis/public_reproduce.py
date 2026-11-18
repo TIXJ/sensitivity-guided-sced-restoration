@@ -1,10 +1,11 @@
-"""Portable saved-record checks and table exports; no physical rerun is implied."""
+"""Saved-record checks only; see physical_reproduce.py for new physical executions."""
 from pathlib import Path
 from statistics import mean
 import argparse
 import hashlib
 import gzip
 import json
+import math
 import re
 
 ROOT = Path(__file__).resolve().parents[2]
@@ -15,6 +16,13 @@ def read(relative):
     if path.exists():
         return json.loads(path.read_text(encoding='utf-8'))
     return json.loads(gzip.decompress(path.with_suffix(path.suffix + '.gz').read_bytes()))
+
+
+def verify_seed_statistics(actual, expected):
+    for field in ('counts', 'test_total'):
+        assert actual[field] == expected[field], field
+    for field in ('mean_pass_rate_pct', 'sample_sd_percentage_points'):
+        assert math.isclose(actual[field], expected[field], rel_tol=0, abs_tol=1e-12), field
 
 
 def verify():
@@ -53,6 +61,15 @@ def verify():
     ac = read('results/ac_audit_summary.json')
     assert [ac[k] for k in ('total_pairs', 'passed_pairs', 'nonconverged_pairs', 'voltage_violating_pairs')] == [882, 536, 46, 300]
     print('AC outage diagnostic: 882 pairs; 536 pass / 46 nonconvergent / 300 voltage violations')
+    from summarize_smallcase_multiseed import summarize_case
+    saved_small = read('results/smallcase_multiseed_v1/summary.json')
+    for case in (39, 118):
+        baseline = read(f'results/evaluation_contract_v2/case{case}_common.json')
+        runs = [read(f'results/smallcase_multiseed_v1/case{case}_seed{seed}/common_test.json') for seed in (1, 2)]
+        actual = summarize_case(baseline, runs)
+        expected = saved_small['cases'][str(case)]
+        verify_seed_statistics(actual, expected)
+        print(f'Small-system seeds, case{case}: {actual["counts"]}/{actual["test_total"]}; mean={actual["mean_pass_rate_pct"]:.1f}%, sample SD={actual["sample_sd_percentage_points"]:.1f} points')
     print(f'Distribution integrity: {len(manifest)} hashes verified. Saved-record checks PASS. No training or physical solver rerun was performed.')
 
 

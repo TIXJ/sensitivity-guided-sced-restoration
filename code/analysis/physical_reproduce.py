@@ -84,7 +84,7 @@ def launch(root, analysis, script, args, timing=False):
 
 def main():
     parser = argparse.ArgumentParser(description=__doc__)
-    parser.add_argument('stage', choices=('prepare', 'original', 'small', 'train', 'ac-audit', 'historical', 'spatial', 'baseline'))
+    parser.add_argument('stage', choices=('prepare', 'original', 'small', 'small-seed', 'train', 'train-small', 'ac-audit', 'historical', 'spatial', 'baseline'))
     parser.add_argument('--baseline', choices=('repair', 'acopf', 'scopf'), default='repair')
     parser.add_argument('--method', choices=('sac', 'full68', 'ddpg', 'td3'), default='sac')
     parser.add_argument('--configuration', help='Frozen evaluation key from data/protocols/policy_evaluation_specs.json')
@@ -106,10 +106,16 @@ def main():
         parser.error('--name must be a single output-directory name')
     if args.max_samples < 0 or args.repeats < 1 or args.updates < 1 or args.episodes_per_update < 1:
         parser.error('Sample limit must be nonnegative; repeats and training budgets must be positive')
-    if args.stage == 'train' and args.method != 'sac':
-        parser.error('The train stage supports SAC only; see docs/PHYSICAL_REPRODUCTION.md for deterministic trainers')
+    if args.stage in ('train', 'train-small') and args.method != 'sac':
+        parser.error('Training stages support SAC only; see docs/PHYSICAL_REPRODUCTION.md for deterministic trainers')
     if args.timing and args.stage not in ('historical', 'spatial'):
         parser.error('--timing is supported only for historical/spatial comparisons')
+    if args.stage in ('small-seed', 'train-small') and args.seed not in (1, 2):
+        parser.error('The added small-system configurations use --seed 1 or --seed 2')
+    if args.stage == 'train-small' and (args.episodes_per_update != 10 or (args.updates != 100 and not args.smoke_training)):
+        parser.error('Small-system full runs retain 100 updates and 10 episodes per update; use --smoke-training for a reduced check')
+    if args.stage == 'train-small' and args.max_samples:
+        parser.error('Use --smoke-training for a reduced small-system check; --max-samples is an evaluation option')
     root, revision, analysis = prepare()
     if args.stage == 'prepare':
         print(root)
@@ -143,6 +149,14 @@ def main():
             parser.error('Output already exists; use a different --name')
         launch(root, analysis, 'evaluate_smallcases_common.py', ['--case', args.case,
             '--max-samples', args.max_samples, '--output', output])
+    elif args.stage == 'small-seed':
+        launch(root, analysis, 'evaluate_smallcase_seed.py', ['--case', args.case, '--seed', args.seed,
+            '--max-samples', args.max_samples, '--output', out / f'case{args.case}_seed{args.seed}.json'])
+    elif args.stage == 'train-small':
+        prefix = 'smoke_' if args.smoke_training else ''
+        training_output = revision / 'experiment_results/smallcase_multiseed_v1' / args.name / f'{prefix}case{args.case}_seed{args.seed}'
+        launch(root, analysis, 'train_smallcase_multiseed.py', ['--case', args.case, '--seed', args.seed,
+            '--updates', 2 if args.smoke_training else 100, '--output', training_output])
     elif args.stage == 'train':
         options = ['--family', args.family, '--dimension', args.dimension, '--shifts', args.shifts,
             '--updates', 1 if args.smoke_training else args.updates, '--episodes-per-update', 1 if args.smoke_training else args.episodes_per_update,

@@ -2,6 +2,8 @@
 
 ## Scope And Current Status
 
+The original validation table below is retained for the v1.1 experiments. Version 1.2.0 adds two correction-policy training seeds on each smaller system; their records are described in [SMALLCASE_SEEDS.md](SMALLCASE_SEEDS.md) and their physical validation is recorded in `SMALLCASE_SEED_VALIDATION.json`.
+
 This guide distinguishes new physical executions from inspection of saved records. Commands are run from the repository root unless a different working directory is explicitly stated. All paths are repository-relative.
 
 The current completed checks used an existing environment, not a newly installed environment. **A clean dependency installation has not been tested. Full retraining from raw inputs has not been completed or validated.** The commands below are not a claim that all manuscript simulations have been rerun.
@@ -40,7 +42,7 @@ python code/analysis/physical_reproduce.py --help
 python code/analysis/physical_reproduce.py prepare
 ```
 
-The positional stages are `prepare`, `original`, `small`, `train`, `historical`, `spatial`, and `ac-audit`. `prepare` verifies the distribution manifest and materializes inputs without executing an experiment. Every invocation creates a fresh `_runtime/<uuid>/ED_RL/` directory; the UUID is a new hexadecimal identifier. Reusing `--name` on a later invocation does not resume the previous UUID's run.
+The positional stages are `prepare`, `original`, `small`, `small-seed`, `train`, `train-small`, `historical`, `spatial`, `baseline`, and `ac-audit`. `prepare` verifies the distribution manifest and materializes inputs without executing an experiment. Every invocation creates a fresh `_runtime/<run-id>/ED_RL/` directory with a randomly allocated eight-character identifier. Reusing `--name` on a later invocation does not resume a previous run.
 
 The wrapper reconstructs the historical relative directory layout within that snapshot. Distributed datasets, partitions, policies, protocol inputs, and caches are copied there. New output does not overwrite the distributed `models/` or saved `results/`. The materialized input inventory is `_runtime/<uuid>/ED_RL/execution_inputs.json`.
 
@@ -121,6 +123,17 @@ python code/analysis/physical_reproduce.py small --case 118 --max-samples 0 --na
 The common evaluator runs prediction-only, one-step myopic search, and the selected policy on the same system-specific IDs. It measures reset/prediction, initial checks, correction, and independent final verification with resident-model setup excluded. The complete commands select 30 cases for 39 buses and 20 for 118 buses, producing 90 and 60 method/case rows respectively. A positive `--max-samples` limits cases, not total method rows.
 
 Both complete common evaluations have now run. For 39 buses, prediction-only accepts 12/30, search 30/30, and policy 30/30. For 118 buses, prediction-only accepts 0/20, search 20/20, and policy 20/20. These commands do not train small-system policies or reproduce every separate action-masking experiment. Outputs are `<name>/case39.json` or `<name>/case118.json` within runtime `experiment_results/`.
+
+The additional selected actors are evaluated separately:
+
+```sh
+python code/analysis/physical_reproduce.py small-seed --case 39 --seed 1 --name seed39_1
+python code/analysis/physical_reproduce.py small-seed --case 118 --seed 2 --name seed118_2
+python code/analysis/physical_reproduce.py train-small --case 39 --seed 1 --name train39_1
+python code/analysis/physical_reproduce.py train-small --case 118 --seed 1 --smoke-training --name smoke118_1
+```
+
+Use `--seed 1` or `--seed 2` for these stages. Full `train-small` runs keep 100 outer iterations and ten episodes per iteration. The smoke option uses two iterations and one evaluation case; it verifies parameter updates and selected-checkpoint evaluation, not final paper performance. The correction-policy trainer keeps the graph predictor frozen. `--max-samples` limits `small-seed` evaluation, not training.
 
 ## Historical And Spatial Workflows
 

@@ -14,6 +14,18 @@ import physical_reproduce as physical
 
 
 class PublicPhysicalTests(unittest.TestCase):
+    def test_seed_statistics_allow_roundoff_but_not_count_changes(self):
+        from public_reproduce import verify_seed_statistics
+        expected = {'counts': [30, 30, 24], 'test_total': 30,
+                    'mean_pass_rate_pct': 93.33333333333333,
+                    'sample_sd_percentage_points': 11.547005383792516}
+        actual = dict(expected, sample_sd_percentage_points=11.547005383792515)
+        verify_seed_statistics(actual, expected)
+        with self.assertRaises(AssertionError):
+            verify_seed_statistics(dict(actual, counts=[30, 30, 25]), expected)
+        with self.assertRaises(AssertionError):
+            verify_seed_statistics(dict(actual, sample_sd_percentage_points=11.6), expected)
+
     def fixture(self, root):
         for folder in ('code/pipeline/root', 'code/analysis', 'data/cases', 'data/partitions',
                        'data/voltage_context/none', 'data/protocols', 'data/operating_points', 'models'):
@@ -79,6 +91,25 @@ class PublicPhysicalTests(unittest.TestCase):
         script = Path(physical.__file__)
         for options in (['--name', '..'], ['--repeats', '0'], ['--max-samples', '-1']):
             run = subprocess.run([sys.executable, str(script), 'historical', *options], capture_output=True)
+            self.assertEqual(run.returncode, 2)
+
+    def test_added_small_seed_stages_use_real_evaluation_and_training(self):
+        for stage, script in (('small-seed', 'evaluate_smallcase_seed.py'),
+                              ('train-small', 'train_smallcase_multiseed.py')):
+            with tempfile.TemporaryDirectory() as temporary:
+                root = Path(temporary) / 'ED_RL'
+                revision = root / 'GAT-SAC-SCED-Framework/first revise'
+                analysis = revision / 'experiments'
+                argv = ['physical_reproduce.py', stage, '--case', '39', '--seed', '1', '--name', 'test_new_seed']
+                with patch.object(sys, 'argv', argv), patch.object(physical, 'prepare', return_value=(root, revision, analysis)), patch.object(physical, 'launch') as launch:
+                    physical.main()
+                self.assertEqual(launch.call_args.args[2], script)
+                self.assertIn('--seed', launch.call_args.args[3])
+
+    def test_small_training_rejects_unimplemented_method_and_sample_overrides(self):
+        script = Path(physical.__file__)
+        for options in (['--method', 'td3'], ['--max-samples', '1']):
+            run = subprocess.run([sys.executable, str(script), 'train-small', '--seed', '1', *options], capture_output=True)
             self.assertEqual(run.returncode, 2)
 
 

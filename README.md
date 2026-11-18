@@ -38,11 +38,24 @@ python code/analysis/public_reproduce.py tables --output generated_tables
 
 Those two commands inspect historical records; they are not physical experiment reproduction.
 
+## Additional Small-System Training Seeds (v1.2.0)
+
+The 39-bus and 118-bus correction policies include additional training seeds 1 and 2, alongside the original run. Each new run retains the fixed data partitions, frozen graph predictor, original controls/rewards, 100 outer iterations, ten episodes per iteration and validation-based checkpoint selection. Selected actor files are indexed in `data/protocols/smallcase_seed_configurations.json`; per-case physical results, validation histories and optimizer-step receipts are under `results/smallcase_multiseed_v1/`.
+
+```sh
+python code/analysis/physical_reproduce.py small-seed --case 39 --seed 1 --name seed39_1
+python code/analysis/physical_reproduce.py small-seed --case 118 --seed 2 --name seed118_2
+python code/analysis/physical_reproduce.py train-small --case 39 --seed 1 --name retrain39_1
+python code/analysis/physical_reproduce.py train-small --case 118 --seed 1 --smoke-training --name smoke118_1
+```
+
+`small-seed` runs policy inference and fresh physical checks on every selected test case. `train-small` executes the original correction-policy trainer with the fixed predictor; the smoke option uses two training iterations and one evaluation case as an execution check, not a paper result. The training adapter uses an outcome-free test-ID record to check partition identity. New measured times are descriptive and do not replace the paper's paired 300-bus timing experiment. The original v1.1.1 tag is unchanged. See [the small-system seed record](docs/SMALLCASE_SEEDS.md) and [its physical validation](docs/SMALLCASE_SEED_VALIDATION.json).
+
 Large result JSON files are losslessly compressed as `.json.gz`; the portable entry point reads either form. Standard `gzip` or Python's `gzip` module can expand them when inspecting the historical scripts. Checkpoint path metadata has been relocated without changing any tensor data block.
 
 ## Reproduction Scope
 
-Full retraining from raw inputs and a fresh dependency installation have **not been validated**. A one-iteration SAC training check performed real critic and actor optimizer steps, but does not demonstrate convergence. All 44 distributed checkpoints and 54 frozen evaluation configurations are indexed in [the asset coverage report](docs/ASSET_COVERAGE.md); not all 54 configurations have been rerun. The physical wrapper restores the historical relative layout inside its isolated snapshot. Historical provenance hashes remain unchanged; the relocated execution is bound to the current distribution manifest. Original archival scripts with author-layout or historical-hash assumptions should not be run by disabling their assertions.
+Full retraining from raw inputs and a fresh dependency installation have **not been validated**. A one-iteration 300-bus SAC training check performed real critic and actor optimizer steps. The additional small-system correction-policy runs retain their frozen predictors. The original 44 checkpoints and 54 frozen evaluation configurations are indexed in [the asset coverage report](docs/ASSET_COVERAGE.md); the four added small-system actors have a separate configuration index. Not all 54 original configurations have been rerun. The physical wrapper restores the historical relative layout inside its isolated snapshot. Historical provenance hashes remain unchanged; the relocated execution is bound to the current distribution manifest. Original archival scripts with author-layout or historical-hash assumptions should not be run by disabling their assertions.
 
 The original policy accepts 44/75 unfiltered cases. Its 27/27 result and 0.788 s timing concern the screened, acceptance-matched subset. The final eight-step gated workflow is a different configuration: matched workflows accept 60/75 historical and 93/100 spatial cases. Historical average timing is 1.912 versus 1.725 s; the spatial paired saving interval contains zero. Base-case AC checks plus linear outage screening do not establish full AC contingency security.
 

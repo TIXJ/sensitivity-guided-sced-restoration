@@ -109,7 +109,7 @@ if not TIMING_ONLY:
     torch.nn.Module.__init__ = module_init
 def module_call(self, *args, **kwargs):
     name = type(self).__name__
-    if name in ('GATv10Predictor', 'GAT39', 'GAT118'):
+    if name in ('GATv10Predictor', 'GAT39', 'GAT118', 'GATPredictor', 'GATv118Predictor'):
         stats['gat_forward_calls'] += 1
     if name in ('Linear', 'GATv2ConvLayer'):
         stats['neural_layer_forward_calls'] += 1

@@ -1,5 +1,11 @@
 # Scientific Asset Coverage
 
+## v1.2.0 Small-System Addition
+
+Four additional validation-selected small-system actors are indexed in `data/protocols/smallcase_seed_configurations.json`, bringing the checkpoint-file total from 44 to 48. Their exact-source hashes, training receipts, validation histories and per-case physical results accompany the configuration index. `docs/SMALLCASE_SEEDS.md` describes these additions, and their physical checks are recorded separately from the original audit below.
+
+The remaining sections retain the original v1.1 asset inventory and its verification scope.
+
 ## Scope And Validation Boundary
 
 This audit describes the repository tree containing the completed asset additions. It does not assert that an earlier public release or downloaded clone contains those additions. All paths below are relative to the repository root.
@@ -16,7 +22,7 @@ The checks were independent file inventories, SHA-256 comparisons, JSON-content 
 | Revised original-policy v31 selected actor | 1 | Exact source-byte and seed-audit SHA-256 match |
 | Earlier v26 SAC policy files | 4 | Exact source-byte matches; distinct from v31 |
 | Graph predictors for 300, 39, and 118 buses | 3 | Both small-system files match source bytes; the sanitized 300-bus container preserves all 73 tensor-storage blocks exactly |
-| **Total checkpoint files (`.pth`)** | **44** | **36 restored policies; 37 evaluation-linked selected policies including v31** |
+| **Original v1.1 checkpoint files (`.pth`)** | **44** | **36 restored policies; 37 evaluation-linked selected policies including v31** |
 
 The 44-file count includes the earlier v26 best, best-training, final, and latest actors; these are not four additional training seeds. The v26 files must not substitute for the v31 policy evaluated in the revised 44/75 result.
 
